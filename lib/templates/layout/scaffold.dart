@@ -11,6 +11,7 @@ class ResponsiveScaffold extends StatelessWidget {
     this.floatingActionButton,
     this.menuIcon,
     this.endIcon,
+    this.backgroundColor,
     this.kTabletBreakpoint = 720.0,
     this.kDesktopBreakpoint = 1440.0,
   });
@@ -55,6 +56,7 @@ class ResponsiveScaffold extends StatelessWidget {
                     ],
                     Expanded(
                       child: Scaffold(
+                        backgroundColor: backgroundColor,
                         key: scaffoldKey,
                         appBar: AppBar(
                           automaticallyImplyLeading: false,
@@ -101,6 +103,7 @@ class ResponsiveScaffold extends StatelessWidget {
         if (constraints.maxWidth >= kTabletBreakpoint) {
           return Scaffold(
             key: scaffoldKey,
+            backgroundColor: backgroundColor,
             drawer: drawer == null
                 ? null
                 : Drawer(
@@ -155,6 +158,7 @@ class ResponsiveScaffold extends StatelessWidget {
         }
         return Scaffold(
           key: scaffoldKey,
+          backgroundColor: backgroundColor,
           drawer: drawer == null
               ? null
               : Drawer(

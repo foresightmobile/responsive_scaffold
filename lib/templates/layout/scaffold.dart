@@ -34,6 +34,8 @@ class ResponsiveScaffold extends StatelessWidget {
 
   final Key scaffoldKey;
 
+  final Color backgroundColor;
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
